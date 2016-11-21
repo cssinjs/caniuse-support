@@ -31,7 +31,7 @@ For a list of queryable features see [here](https://github.com/Fyrd/caniuse/tree
 
 ## Playground
 
-Checkout this [code pen](http://codepen.io/wikiwi/pen/QGpgKp?editors=1012).
+Checkout this [code pen](http://codepen.io/wikiwi/pen/QGpgKp?editors=0012).
 
 ## Known issues
 
