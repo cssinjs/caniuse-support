@@ -32,8 +32,6 @@ const browserIDMap: { [id: string]: BrowserID } = {
 };
 
 /**
- * Detect browser.
- *
  * @param {String} ua optional user-agent
  */
 export function detectBrowser(ua?: string): Browser {
