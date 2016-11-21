@@ -29,6 +29,10 @@ console.log(`${currentBrowser.id} ${currentBrowser.version}`);
 
 For a list of queryable features see [here](https://github.com/Fyrd/caniuse/tree/master/features-json).
 
+## Playground
+
+Checkout this [code pen](http://codepen.io/wikiwi/pen/QGpgKp?editors=1011).
+
 ## Known issues
 
 - Currently there is no support for Opera Mini detection until this [issue](https://github.com/ded/bowser/issues/158) is resolved.
