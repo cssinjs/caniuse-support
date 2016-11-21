@@ -1,10 +1,12 @@
 # caniuse-support
 
-Query the [caniuse offline database](https://github.com/Fyrd/caniuse) for feature support.
-
 [![NPM Version Widget]][npm version]
 [![Build Status Widget]][build status]
 [![Coverage Status Widget]][coverage status]
+
+Query the [caniuse offline database](https://github.com/Fyrd/caniuse) for feature support.
+
+Includes browser detection using [bowser](https://github.com/ded/bowser).
 
 ## Usage
 
@@ -21,7 +23,7 @@ getSupport("flexbox", { id: "chrome", version: "6.0" }); // { level: "partial", 
 const userAgent = "Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0";
 getSupport("transforms2d", detectBrowser(userAgent)); // { level: "full", needPrefix: false }
 
-// For convenience, get current browser detection.
+// For convenience, get current browser.
 console.log(`${currentBrowser.id} ${currentBrowser.version}`);
 ```
 
