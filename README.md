@@ -2,6 +2,9 @@
 
 Query the [caniuse offline database](https://github.com/Fyrd/caniuse) for feature support.
 
+[![NPM Version Widget]][npm version]
+[![Build Status Widget]][build status]
+[![Coverage Status Widget]][coverage status]
 
 ## Usage
 
@@ -23,10 +26,6 @@ console.log(`${currentBrowser.id} ${currentBrowser.version}`);
 ```
 
 For a list of queryable features see [here](https://github.com/Fyrd/caniuse/tree/master/features-json).
-
-[![NPM Version Widget]][npm version]
-[![Build Status Widget]][build status]
-[![Coverage Status Widget]][coverage status]
 
 ## Contributions
 
