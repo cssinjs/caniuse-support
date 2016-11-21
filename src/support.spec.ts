@@ -8,7 +8,7 @@
 
 import { assert } from "chai";
 
-import { getSupport } from "./index";
+import { getSupport } from "./support";
 import fixture from "../test/fixture";
 
 describe("index.ts", () => {

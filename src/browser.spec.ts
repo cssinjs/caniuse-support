@@ -8,7 +8,7 @@
 
 import { assert } from "chai";
 
-import { detectBrowser } from "./index";
+import { detectBrowser } from "./browser";
 import fixture from "../test/fixture";
 
 describe("browser.ts", () => {
