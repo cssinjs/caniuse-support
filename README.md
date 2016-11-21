@@ -37,10 +37,6 @@ Checkout this [code pen](http://codepen.io/wikiwi/pen/QGpgKp?editors=0012).
 
 - Currently there is no support for Opera Mini detection until this [issue](https://github.com/ded/bowser/issues/158) is resolved.
 
-## Contributions
-
-Contributions welcome! Make sure to pass `$ npm run all`.
-
 [npm version]: https://www.npmjs.com/package/caniuse-support
 
 [npm version widget]: https://img.shields.io/npm/v/caniuse-support.svg?style=flat-square
