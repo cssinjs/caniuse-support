@@ -14,14 +14,14 @@ import { getSupport, detectBrowser, currentBrowser } from "caniuse-support";
 // Get feature support of current browser.
 getSupport("transforms2d"); // { level: "none", needPrefix: false }
 
-// Get feature support of another browser.
+// Get feature support of specific browser.
 getSupport("flexbox", { id: "chrome", version: "6.0" }); // { level: "partial", needPrefix: true }
 
-// Get feature support of another browser using an user agent string.
+// Get feature support of specific browser using an user agent string.
 const userAgent = "Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0";
 getSupport("transforms2d", detectBrowser(userAgent)); // { level: "full", needPrefix: false }
 
-// For convenience, show current browser detection.
+// For convenience, get current browser detection.
 console.log(`${currentBrowser.id} ${currentBrowser.version}`);
 ```
 
