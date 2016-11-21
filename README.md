@@ -29,6 +29,10 @@ console.log(`${currentBrowser.id} ${currentBrowser.version}`);
 
 For a list of queryable features see [here](https://github.com/Fyrd/caniuse/tree/master/features-json).
 
+## Known issues
+
+- Currently there is no support for Opera Mini detection until this [issue](https://github.com/ded/bowser/issues/158) is resolved.
+
 ## Contributions
 
 Contributions welcome! Make sure to pass `$ npm run all`.
