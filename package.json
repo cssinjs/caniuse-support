@@ -1,0 +1,75 @@
+{
+  "name": "caniuse-support",
+  "version": "0.2.0",
+  "description": "Query the caniuse offline database for feature support.",
+  "homepage": "https://github.com/wikiwi/caniuse-support",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wikiwi/caniuse-support.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wikiwi/caniuse-support/issues"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "cjs"
+  ],
+  "jsnext:main": "./lib/index.js",
+  "main": "./cjs/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "all": "npm run lint && npm run test && npm run build",
+    "build": "gulp && webpack",
+    "clean": "rm -r -f dist lib cjs coverage",
+    "lint": "gulp lint",
+    "release": "npm version -m 'caniuse-support release %s'",
+    "ci:coveralls": "cat coverage/lcov.info | coveralls",
+    "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}'  mocha --opts mocha.opts",
+    "test:coverage": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' istanbul cover node_modules/.bin/_mocha -- --opts mocha.opts",
+    "test:watch": "npm run test -- --watch"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "caniuse",
+    "query",
+    "offline"
+  ],
+  "author": "Chi Vinh Le and contributors (https://github.com/wikiwi/caniuse-support/graphs/contributors)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.45",
+    "awesome-typescript-loader": "^2.2.4",
+    "cash-cat": "^0.2.0",
+    "cash-rm": "^0.2.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.14",
+    "cross-env": "^3.1.1",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-jsonlint": "^1.1.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-tslint": "^7.0.0",
+    "gulp-typescript": "^3.0.2",
+    "gulp-yaml-validate": "^1.0.2",
+    "istanbul": "^1.1.0-alpha.1",
+    "json-loader": "^0.5.4",
+    "merge2": "^1.0.2",
+    "mocha": "^3.1.0",
+    "ts-node": "~1.2.3",
+    "tslint": "^4.0.0-dev.2",
+    "typescript": "^2.2.0-dev.20161120",
+    "webpack": "^2.1.0-beta.25"
+  },
+  "dependencies": {
+    "bowser": "^1.5.0",
+    "caniuse-db": "^1.0.30000584"
+  }
+}

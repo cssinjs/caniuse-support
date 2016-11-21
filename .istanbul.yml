@@ -1,0 +1,11 @@
+instrumentation:
+  root: ./src/
+  extensions:
+    - .ts
+  excludes:
+    - "**/*.spec.ts"
+  include-all-sources: true
+  es-modules: true
+
+reporting:
+  print: detail

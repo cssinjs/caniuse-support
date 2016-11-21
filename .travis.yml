@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- '6'
+before_script:
+- npm prune
+script:
+- npm run lint
+- npm run test:coverage
+- npm run build
+after_success:
+- npm run ci:coveralls
+deploy:
+  provider: npm
+  on:
+    repo: wikiwi/caniuse-support
+    tags: true
+    node: '6'
+  skip_cleanup: true
+  email: vinh@wikiwi.io
+  api_key:
+    secure: DuWqMMeq1p/z26Nf0cRp4kSjVKjnCMkJaUS01xeh1IKkPHZ67sdBj9SzewyQSduipb9/u/pfEZAWGL30TwNobnY9S86Khog4wNlVHEJDkV8mS6ieuQHhRz+qKDQRrzBAzcunmSEpVUMgv7ieDjtMuxlCm/Sc6O0HHsgDBHFffcjDNgRNNVRbZ0b+b0aoGh74asRL3pgkMXJf9mmkR9f4h3Y9LBobUAT9Bj8qZl9FCWP1sw5yFCC2LA6a4Sitr484rFAlnB/WGc2m1ZGkc1+yDiTg74xr88yD7OZUns6PfCPn/h83xk4a0q4J7jfYs1e9xAlLAaLDIW2njDJs1mcfUoIGT5q6FDVH4z0/b5ioj/OptsQJtagZuoMckRC7Ru6RudJhh3/+1VO1ohX1ifsDz8+ZI1kgXq/U7wANFYXjOLHLG7eGjpVZa7rgkrxZW/J3CPIaJqCd/rRg/nNtrg7XC+wH0Z0B8KCa2/attFrARAIYvJWD254SZfMXsZlWqcNPnrOmnu1hMcN4H9/MbRGbhsI4aqjIpiBON0gLXo8rL8/GpEYUbPlOjOt/gyX/jrCxiGS7pMqPdb4wO7u73VawNzdNUsCCqR86Q0Q7z0s2nOMFEdZGN/6PyieGeD1DFoNZRGlJ/S7IHXUY3fjWFus/TcHQqqv+Yhz9gCusR+ugR9Y=
