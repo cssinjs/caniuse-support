@@ -7,12 +7,8 @@
     "no-string-literal": false,
     "file-header": [true, "@license"],
     "no-switch-case-fall-through": true,
-
-    "adjacent-overload-signatures": true,
-    "no-unsafe-finally": true,
+    "max-classes-per-file": false,
     "object-literal-key-quotes": [true, "as-needed"],
-    "object-literal-shorthand": true,
-    "only-arrow-functions": [true, "allow-declarations"],
     "ordered-imports": false
   }
 }
