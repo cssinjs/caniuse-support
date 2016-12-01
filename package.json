@@ -43,7 +43,7 @@
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.32",
     "@types/node": "^6.0.45",
-    "awesome-typescript-loader": "^2.2.4",
+    "awesome-typescript-loader": "^3.0.0-beta.9",
     "cash-cat": "^0.2.0",
     "cash-rm": "^0.2.0",
     "chai": "^3.5.0",
@@ -57,7 +57,7 @@
     "gulp-jsonlint": "^1.1.2",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-tslint": "^7.0.0",
-    "gulp-typescript": "^3.0.2",
+    "gulp-typescript": "~3.0.2",
     "gulp-yaml-validate": "^1.0.2",
     "istanbul": "^1.1.0-alpha.1",
     "json-loader": "^0.5.4",
@@ -65,7 +65,7 @@
     "mocha": "^3.1.0",
     "ts-node": "~1.2.3",
     "tslint": "^4.0.1",
-    "typescript": "^2.2.0-dev.20161120",
+    "typescript": "~2.2.0-dev.20161120",
     "webpack": "^2.1.0-beta.25"
   },
   "dependencies": {
