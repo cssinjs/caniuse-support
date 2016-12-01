@@ -15,6 +15,7 @@ const db = require("caniuse-db/data.json");
 export interface Support {
   level: "unknown" | "none" | "partial" | "full";
   needPrefix: boolean;
+  notes: number[];
 }
 
 /**
@@ -25,7 +26,7 @@ export interface Support {
  */
 export function getSupport(feature: string, browser = currentBrowser): Support {
   const targetVersion = parseFloat(browser.version as string);
-  const support: Support = { level: "unknown", needPrefix: false };
+  const support: Support = { level: "unknown", needPrefix: false, notes: [] };
   const stats = db.data[feature].stats[browser.id];
   if (!stats) { return support; }
   // sorted contains a list with sorted version numbers.
@@ -51,6 +52,15 @@ export function getSupport(feature: string, browser = currentBrowser): Support {
       support.level = "none";
     }
     support.needPrefix = match.indexOf("x") !== -1;
+    match.split(" ").forEach((s) => {
+      if (s === "y") {
+        support.level = "full";
+      } else if (s === "a") {
+        support.level = "partial";
+      } else if (s[0] === "#") {
+        support.notes.push(parseInt(s.substr(1), 10));
+      }
+    });
   }
   return support;
 }

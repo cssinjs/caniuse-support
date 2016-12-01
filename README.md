@@ -14,14 +14,14 @@ Includes browser detection using [bowser](https://github.com/ded/bowser).
 import { getSupport, detectBrowser, currentBrowser } from "caniuse-support";
 
 // Get feature support of current browser.
-getSupport("transforms2d"); // { level: "none", needPrefix: false }
+getSupport("transforms2d"); // { level: "none", needPrefix: false, notes: [] }
 
 // Get feature support of specific browser.
-getSupport("flexbox", { id: "chrome", version: "6.0" }); // { level: "partial", needPrefix: true }
+getSupport("flexbox", { id: "chrome", version: "6.0" }); // { level: "partial", needPrefix: true, notes: [1] }
 
 // Get feature support of specific browser using an user agent string.
 const userAgent = "Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0";
-getSupport("transforms2d", detectBrowser(userAgent)); // { level: "full", needPrefix: false }
+getSupport("transforms2d", detectBrowser(userAgent)); // { level: "full", needPrefix: false, notes: [] }
 
 // For convenience, get current browser.
 console.log(`${currentBrowser.id} ${currentBrowser.version}`);
