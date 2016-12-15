@@ -8,7 +8,7 @@
 
 /* tslint:disable: no-var-requires */
 
-import { currentBrowser } from "./browser";
+import { currentBrowser, Browser } from "./browser";
 
 const db = require("caniuse-db/data.json");
 
@@ -25,34 +25,22 @@ export interface Support {
  * @param {{id: string; version: string}} browser
  */
 export function getSupport(feature: string, browser = currentBrowser): Support {
-  const targetVersion = parseFloat(browser.version as string);
   const support: Support = { level: "unknown", needPrefix: false, notes: [] };
   const stats = db.data[feature].stats[browser.id];
   if (!stats) { return support; }
-  // sorted contains a list with sorted version numbers.
-  const sorted = Object.keys(stats).sort((a, b) => parseFloat(a) - parseFloat(b));
 
-  // at the end of this loop, match contains the stat value of the closest matching
-  // from <= targetVersion.
-  let match = "";
-  for (const v of sorted) {
-    const [from] = v.split("-").map((x) => parseFloat(x));
-    if (targetVersion >= from) {
-      match = stats[v];
-    } else {
-      break;
-    }
-  }
-  if (match) {
-    if (match.indexOf("y") !== -1) {
+  const versionIdx = getVersionIndex(browser);
+  if (versionIdx) {
+    const value = stats[versionIdx];
+    if (value.indexOf("y") !== -1) {
       support.level = "full";
-    } else if (match.indexOf("a") !== -1) {
+    } else if (value.indexOf("a") !== -1) {
       support.level = "partial";
     } else {
       support.level = "none";
     }
-    support.needPrefix = match.indexOf("x") !== -1;
-    match.split(" ").forEach((s) => {
+    support.needPrefix = value.indexOf("x") !== -1;
+    value.split(" ").forEach((s: string) => {
       if (s === "y") {
         support.level = "full";
       } else if (s === "a") {
@@ -63,4 +51,31 @@ export function getSupport(feature: string, browser = currentBrowser): Support {
     });
   }
   return support;
+}
+
+/**
+ * Get matching browser version index of the caniuse db.
+ * Will return last known version index if target version > any known versions.
+ * Returns an empty string if target version < any known versions.
+ *
+ * @param {{id: string; version: string}} browser
+ */
+export function getVersionIndex(browser: Browser): string {
+  const targetVersion = parseFloat(browser.version);
+  const stats = db.data["css-appearance"].stats[browser.id];
+  if (!stats) { return ""; }
+  // Sorted contains a list with sorted version numbers.
+  const sorted = Object.keys(stats).sort((a, b) => parseFloat(a) - parseFloat(b));
+
+  // At the end of this loop, match contains the closest matching version.
+  let match = "";
+  for (const v of sorted) {
+    const [from] = v.split("-").map((x) => parseFloat(x));
+    if (targetVersion >= from) {
+      match = v;
+    } else {
+      break;
+    }
+  }
+  return match;
 }

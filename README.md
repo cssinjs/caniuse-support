@@ -23,6 +23,9 @@ getSupport("flexbox", { id: "chrome", version: "6.0" }); // { level: "partial", 
 const userAgent = "Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0";
 getSupport("transforms2d", detectBrowser(userAgent)); // { level: "full", needPrefix: false, notes: [] }
 
+// Get matching caniuse version index.
+getVersionIndex(detectBrowser(userAgent)); // "26"
+
 // For convenience, get current browser.
 console.log(`${currentBrowser.id} ${currentBrowser.version}`);
 ```

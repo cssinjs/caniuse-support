@@ -8,7 +8,7 @@
 
 import { assert } from "chai";
 
-import { getSupport } from "./support";
+import { getSupport, getVersionIndex } from "./support";
 import fixture from "../test/fixture";
 
 describe("index.ts", () => {
@@ -22,6 +22,17 @@ describe("index.ts", () => {
             `Invalid ${feature} support for ${ua}`,
           );
         }
+      }
+    });
+  });
+  describe("getVersionIndex()", () => {
+    it("should detect version index", () => {
+      for (const ua in fixture) {
+        assert.deepEqual(
+          getVersionIndex(fixture[ua].browser),
+          fixture[ua].versionIndex,
+          `Invalid known version for ${ua}`,
+        );
       }
     });
   });

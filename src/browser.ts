@@ -13,7 +13,7 @@ export type BrowserID = "unknown" | "ie" | "edge" | "firefox" | "chrome" | "safa
 
 export type Browser = {
   id: BrowserID;
-  version: string | number;
+  version: string;
 };
 
 // bowser id -> caniuse id
