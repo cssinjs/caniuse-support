@@ -20,7 +20,7 @@
   "typings": "./lib/index.d.ts",
   "scripts": {
     "all": "npm run lint && npm run test && npm run build",
-    "build": "gulp && webpack",
+    "build": "gulp && webpack && cross-env BUILD_MINIFIED=true webpack",
     "clean": "rm -r -f dist lib cjs coverage",
     "lint": "gulp lint",
     "release": "npm version -m 'caniuse-support release %s'",
