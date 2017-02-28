@@ -1,6 +1,6 @@
 {
   "name": "caniuse-support",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Query the caniuse offline database for feature support.",
   "homepage": "https://github.com/wikiwi/caniuse-support",
   "repository": {
