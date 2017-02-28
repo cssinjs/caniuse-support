@@ -45,9 +45,9 @@ export function detectBrowser(ua?: string): Browser {
     }
   }
   // no opera mini support yet: https://github.com/ded/bowser/issues/158
-  if (bid === "chrome" && bowserInst.android) {
-    bid = "and_chr";
-  } else if (bid === "safari" && bowserInst.ios) {
+  // no chrome for android detection as it largely matches the desktop version which
+  // is better tracked in the caniuse database.
+  if (bid === "safari" && bowserInst.ios) {
     bid = "ios_saf";
   } else if (bid === "ie" && bowserInst.windowsphone) {
     bid = "ie_mob";
@@ -59,6 +59,7 @@ export function detectBrowser(ua?: string): Browser {
   } else if (bid === "ios_saf") {
     version = bowserInst.osversion;
   }
+
   return { id: bid, version };
 }
 

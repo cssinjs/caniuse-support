@@ -10,11 +10,11 @@
 
 const fixture: any = {
   "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 9 Build/LMY48T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Safari/537.36": {
-    browser: { id: "and_chr", version: "47.0" },
-    versionIndex: "",
+    browser: { id: "chrome", version: "47.0" },
+    versionIndex: "47",
     features: {
-      transforms2d: { level: "unknown", needPrefix: false, notes: [] },
-      flexbox: { level: "unknown", needPrefix: false, notes: [] },
+      transforms2d: { level: "full", needPrefix: false, notes: [] },
+      flexbox: { level: "full", needPrefix: false, notes: [] },
     },
   },
   "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)": {
