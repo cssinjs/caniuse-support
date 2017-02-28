@@ -21,7 +21,7 @@ const fixture: any = {
     browser: { id: "ie", version: "9.0" },
     versionIndex: "9",
     features: {
-      transforms2d: { level: "full", needPrefix: true, notes: [] },
+      transforms2d: { level: "full", needPrefix: true, notes: [1] },
       flexbox: { level: "none", needPrefix: false, notes: [] },
     },
   },
@@ -29,7 +29,7 @@ const fixture: any = {
     browser: { id: "ie", version: "10.0" },
     versionIndex: "10",
     features: {
-      transforms2d: { level: "full", needPrefix: false, notes: [] },
+      transforms2d: { level: "full", needPrefix: false, notes: [1] },
       flexbox: { level: "partial", needPrefix: true, notes: [2, 4] },
     },
   },
@@ -37,7 +37,7 @@ const fixture: any = {
     browser: { id: "ie", version: "11.0" },
     versionIndex: "11",
     features: {
-      transforms2d: { level: "full", needPrefix: false, notes: [] },
+      transforms2d: { level: "full", needPrefix: false, notes: [1] },
       flexbox: { level: "partial", needPrefix: false, notes: [4] },
     },
   },
@@ -45,7 +45,7 @@ const fixture: any = {
     browser: { id: "edge", version: "12.0" },
     versionIndex: "12",
     features: {
-      transforms2d: { level: "full", needPrefix: false, notes: [] },
+      transforms2d: { level: "full", needPrefix: false, notes: [1] },
       flexbox: { level: "full", needPrefix: false, notes: [] },
     },
   },
