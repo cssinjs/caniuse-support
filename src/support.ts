@@ -26,13 +26,13 @@ export interface Support {
  */
 export function getSupport(feature: string, browser = currentBrowser): Support {
   const support: Support = { level: "unknown", needPrefix: false, notes: [] };
-  let stats;
-  if (db.data[feature].stats[browser.id]) {
-    stats = db.data[feature].stats[browser.id]
+  var feature = db.data[feature];
+  var browserId; 
+  if (feature && feature.stats) {
+      browserId = feature.stats[browser.id];
   } else {
-    return support;
+      return support;
   }
-
   const versionIdx = getVersionIndex(browser);
   if (versionIdx) {
     const value = stats[versionIdx];
