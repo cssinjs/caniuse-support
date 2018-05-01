@@ -9,8 +9,7 @@
 /* tslint:disable: no-var-requires */
 
 import { currentBrowser, Browser } from "./browser";
-
-const db = require("caniuse-db/data.json");
+import * as lite from 'caniuse-lite';
 
 export interface Support {
   level: "unknown" | "none" | "partial" | "full";
@@ -26,7 +25,7 @@ export interface Support {
  */
 export function getSupport(feature: string, browser = currentBrowser): Support {
   const support: Support = { level: "unknown", needPrefix: false, notes: [] };
-  const stats = db.data[feature].stats[browser.id];
+  const stats = lite.feature(require(`caniuse-lite/data/features/${feature}.js`)).stats[browser.id];
   if (!stats) { return support; }
 
   const versionIdx = getVersionIndex(browser);
@@ -62,7 +61,7 @@ export function getSupport(feature: string, browser = currentBrowser): Support {
  */
 export function getVersionIndex(browser: Browser): string {
   const targetVersion = parseFloat(browser.version);
-  const stats = db.data["css-appearance"].stats[browser.id];
+  const stats = lite.feature(require("caniuse-lite/data/features/css-appearance.js")).stats[browser.id];
   if (!stats) { return ""; }
   // Sorted contains a list with sorted version numbers.
   const sorted = Object.keys(stats).sort((a, b) => parseFloat(a) - parseFloat(b));

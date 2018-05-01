@@ -9,11 +9,18 @@ const libraryName = packageName.replace(/(^|-)(.)/g, (match, _, c) => (c ? c.toU
 
 const config = {
   entry: "./src/index.ts",
-  resolve: { extensions: [".ts"] },
+  resolve: { extensions: [".ts", ".js"] },
   module: {
     rules: [
       { test: /\.ts$/, loader: "awesome-typescript-loader", exclude: "/node_modules/" },
-      { test: /\.json$/, loader: "json-loader" },
+      { test: /\.js$/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["babel-preset-env"],
+          },
+        },
+      },
     ],
   },
   output: {

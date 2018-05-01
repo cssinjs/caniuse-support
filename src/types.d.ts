@@ -7,4 +7,4 @@
  */
 
 declare module "bowser";
-declare module "caniuse-db/data.json";
+declare module "caniuse-lite";
