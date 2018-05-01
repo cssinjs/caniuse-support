@@ -13,14 +13,7 @@ const config = {
   module: {
     rules: [
       { test: /\.ts$/, loader: "awesome-typescript-loader", exclude: "/node_modules/" },
-      { test: /\.js$/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["babel-preset-env"],
-          },
-        },
-      },
+      { test: /\.js$/, loader: "babel-loader" },
     ],
   },
   output: {
