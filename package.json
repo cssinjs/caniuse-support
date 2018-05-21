@@ -71,6 +71,6 @@
   },
   "dependencies": {
     "bowser": "^1.5.0",
-    "caniuse-db": "^1.0.30000584"
+    "caniuse-lite": "^1.0.30000832"
   }
 }
