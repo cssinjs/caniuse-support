@@ -9,7 +9,7 @@
 /* tslint:disable: no-var-requires */
 
 import { currentBrowser, Browser } from "./browser";
-import * as lite from 'caniuse-lite';
+import * as lite from "caniuse-lite";
 
 export interface Support {
   level: "unknown" | "none" | "partial" | "full";
