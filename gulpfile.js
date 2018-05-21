@@ -50,7 +50,7 @@ gulp.task("tslint", () => {
     .pipe(tslint({
       formatter: "verbose",
     }))
-  .pipe(tslint.report());
+    .pipe(tslint.report());
 });
 
 gulp.task("eslint", () => {

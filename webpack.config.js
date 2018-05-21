@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const webpack = require("webpack");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 const useMinification = process.env.BUILD_MINIFIED === "true";
 const packageName = JSON.parse(fs.readFileSync("package.json", "utf8")).name;
@@ -13,7 +14,6 @@ const config = {
   module: {
     rules: [
       { test: /\.ts$/, loader: "awesome-typescript-loader", exclude: "/node_modules/" },
-      { test: /\.js$/, loader: "babel-loader" },
     ],
   },
   output: {
@@ -34,9 +34,18 @@ const minified = Object.assign({}, config, {
   output: Object.assign({}, config.output, {
     filename: `dist/${packageName}.min.js`,
   }),
-  plugins: config.plugins.slice(0).concat([
-    new webpack.optimize.UglifyJsPlugin({ output: { comments: false }, sourceMap: false }),
-  ]),
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: false,
+          },
+          sourceMap: false,
+        },
+      }),
+    ],
+  },
 });
 
 // @TODO let webpack run configurations in parallel after solving:
