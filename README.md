@@ -1,7 +1,7 @@
 # caniuse-support
 
 [![Build Status](https://travis-ci.org/cssinjs/caniuse-support.svg?branch=master)](https://travis-ci.org/cssinjs/caniuse-support)
-[![Coverage Status](https://coveralls.io/repos/github/cssinjs/caniuse-support/badge.svg?branch=master)](https://coveralls.io/github/cssinjs/caniuse-support?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/cssinjs/caniuse-support/badge.svg?branch=master)](https://coveralls.io/github/cssinjs/caniuse-support?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/cssinjs/caniuse-support.svg)](https://greenkeeper.io/)
 
 Query the [caniuse offline database](https://github.com/Fyrd/caniuse) for feature support.
 
