@@ -11,10 +11,10 @@ import * as bowser from "bowser";
 export type BrowserID = "unknown" | "ie" | "edge" | "firefox" | "chrome" | "safari" | "opera" |
   "and_uc" | "samsung" | "bb" | "android" | "ios_saf" | "and_chr" | "ie_mob";
 
-export type Browser = {
+export interface Browser {
   id: BrowserID;
   version: string;
-};
+}
 
 // bowser id -> caniuse id
 const browserIDMap: { [id: string]: BrowserID } = {

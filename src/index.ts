@@ -8,5 +8,5 @@
 
 /* tslint:disable: no-var-requires */
 
-export * from "./browser"
-export * from "./support"
+export * from "./browser";
+export * from "./support";
