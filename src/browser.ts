@@ -36,7 +36,7 @@ const browserIDMap: { [id: string]: BrowserID } = {
  */
 export function detectBrowser(ua?: string): Browser {
   const bowserInst = ua ? bowser._detect(ua) : bowser;
-  let version = bowserInst.version;
+  let version = bowserInst.version.toString();
   let bid: BrowserID = "unknown";
   for (const b in browserIDMap) {
     if (bowserInst[b]) {
@@ -55,9 +55,9 @@ export function detectBrowser(ua?: string): Browser {
 
   // use mobile os version.
   if (bid === "android") {
-    version = bowserInst.osversion;
+    version = bowserInst.osversion.toString();
   } else if (bid === "ios_saf") {
-    version = bowserInst.osversion;
+    version = bowserInst.osversion.toString();
   }
 
   return { id: bid, version };
