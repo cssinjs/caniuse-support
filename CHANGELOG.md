@@ -1,3 +1,7 @@
+## 0.4.2 (July 3, 2018)
+
+- Migrated to caniuse-lite
+
 ## 0.4.1 (February 28, 2017)
 
 - Use chrome desktop data for and_chr
