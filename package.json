@@ -71,6 +71,6 @@
   },
   "dependencies": {
     "bowser": "^1.9.4",
-    "caniuse-lite": "^1.0.30000862"
+    "caniuse-lite": "^1.0.30000883"
   }
 }
