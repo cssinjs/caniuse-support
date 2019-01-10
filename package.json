@@ -30,7 +30,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "keywords": [
     "caniuse",
