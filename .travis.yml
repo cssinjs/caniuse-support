@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '6'
+- '8'
 before_script:
 - npm prune
 script:
@@ -14,7 +14,7 @@ deploy:
   on:
     repo: wikiwi/caniuse-support
     tags: true
-    node: '6'
+    node: '8'
   skip_cleanup: true
   email: vinh@wikiwi.io
   api_key:

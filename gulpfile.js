@@ -71,5 +71,5 @@ gulp.task("yamllint", () => {
     .pipe(yamllint());
 });
 
-gulp.task("lint", ["jsonlint", "eslint", "tslint", "yamllint"]);
-gulp.task("default", ["lib", "commonjs"]);
+gulp.task("lint", gulp.series("jsonlint", "eslint", "tslint", "yamllint"));
+gulp.task("default", gulp.series("lib", "commonjs"));
