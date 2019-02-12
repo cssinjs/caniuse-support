@@ -42,7 +42,7 @@
   "devDependencies": {
     "@types/chai": "^4.1.4",
     "@types/mocha": "^5.2.4",
-    "@types/node": "^10.12.2",
+    "@types/node": "^11.9.0",
     "awesome-typescript-loader": "^5.2.0",
     "cash-cat": "^0.2.0",
     "cash-rm": "^0.2.0",
