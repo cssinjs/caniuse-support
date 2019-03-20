@@ -69,7 +69,7 @@ export function getVersionIndex(browser: Browser): string {
   // At the end of this loop, match contains the closest matching version.
   let match = "";
   for (const v of sorted) {
-    let [from] = v.split("-").map((x) => parseFloat(x));
+    const [from] = v.split("-").map((x) => parseFloat(x));
     if (isNaN(from)) {
       match = v.split("-")[0];
       break;
