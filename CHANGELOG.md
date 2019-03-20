@@ -1,3 +1,11 @@
+## 0.4.4 (March 21, 2019)
+
+- Dependencies update
+
+## 0.4.3 (September 1, 2019)
+
+- Dependencies update
+
 ## 0.4.2 (July 3, 2018)
 
 - Migrated to caniuse-lite
