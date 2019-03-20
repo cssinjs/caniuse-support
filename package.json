@@ -19,15 +19,15 @@
   "main": "./cjs/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
-    "all": "npm run lint && npm run test && npm run build",
+    "all": "yarn run lint && yarn run test && yarn run build",
     "build": "gulp && webpack && cross-env BUILD_MINIFIED=true webpack",
     "clean": "rm -r -f dist lib cjs coverage",
     "lint": "gulp lint",
-    "release": "npm version -m 'caniuse-support release %s'",
+    "release": "yarn version -m 'caniuse-support release %s'",
     "ci:coveralls": "cat coverage/lcov.info | coveralls",
     "test": "cross-env TS_NODE_FILES=true TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}'  mocha --opts mocha.opts",
     "test:coverage": "cross-env TS_NODE_FILES=true TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' istanbul cover node_modules/.bin/_mocha -- --opts mocha.opts",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "yarn run test -- --watch"
   },
   "engines": {
     "node": ">=8"
