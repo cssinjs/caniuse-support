@@ -18,16 +18,16 @@ export interface Browser {
 
 // bowser id -> caniuse id
 const browserIDMap: { [id: string]: BrowserID } = {
-  'internet explorer': "ie",
-  'microsoft edge': "edge",
+  "internet explorer": "ie",
+  "microsoft edge": "edge",
   firefox: "firefox",
   chrome: "chrome",
   safari: "safari",
   opera: "opera",
-  'uc browser': "and_uc",
-  'samsung internet for android': "samsung",
+  "uc browser": "and_uc",
+  "samsung internet for android": "samsung",
   blackberry: "bb",
-  'android browser': "android",
+  "android browser": "android",
   ios: "ios_saf",
 };
 
@@ -35,7 +35,9 @@ const browserIDMap: { [id: string]: BrowserID } = {
  * @param {String} ua optional user-agent
  */
 export function detectBrowser(ua?: string): Browser {
-  if (!ua) return
+  if (!ua) {
+    return;
+  }
   const bowserInst = Bowser.getParser(ua);
   let version = bowserInst.getBrowserVersion().toString();
   let bid: BrowserID = "unknown";
@@ -48,9 +50,9 @@ export function detectBrowser(ua?: string): Browser {
   // no opera mini support yet: https://github.com/ded/bowser/issues/158
   // no chrome for android detection as it largely matches the desktop version which
   // is better tracked in the caniuse database.
-  if (bid === "safari" && bowserInst.getOS().name === 'iOS') {
+  if (bid === "safari" && bowserInst.getOS().name === "iOS") {
     bid = "ios_saf";
-  } else if (bid === "ie" && bowserInst.getOS().name === 'Windows Phone') {
+  } else if (bid === "ie" && bowserInst.getOS().name === "Windows Phone") {
     bid = "ie_mob";
   }
 
