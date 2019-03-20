@@ -10,7 +10,7 @@
 
 const fixture: any = {
   "Mozilla/5.0 (Linux; Android 5.1.1; Nexus 9 Build/LMY48T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Safari/537.36": {
-    browser: { id: "chrome", version: "47.0" },
+    browser: { id: "chrome", version: "47.0.2526.83" },
     versionIndex: "47",
     features: {
       transforms2d: { level: "full", needPrefix: false, notes: [] },
@@ -66,7 +66,7 @@ const fixture: any = {
     },
   },
   "Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML, like Gecko) Version/7.2.1.0 Safari/536.2+": {
-    browser: { id: "bb", version: "7.2" },
+    browser: { id: "bb", version: "7.2.1.0" },
     versionIndex: "7",
     features: {
       transforms2d: { level: "full", needPrefix: true, notes: [] },
@@ -114,7 +114,7 @@ const fixture: any = {
     },
   },
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2": {
-    browser: { id: "safari", version: "5.1" },
+    browser: { id: "safari", version: "5.1.7" },
     versionIndex: "TP",
     features: {
       transforms2d: { level: "full", needPrefix: false, notes: [] },
@@ -122,7 +122,7 @@ const fixture: any = {
     },
   },
   "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100": {
-    browser: { id: "opera", version: "15.0" },
+    browser: { id: "opera", version: "15.0.1147.100" },
     versionIndex: "15",
     features: {
       transforms2d: { level: "full", needPrefix: true, notes: [] },
@@ -130,7 +130,7 @@ const fixture: any = {
     },
   },
   "Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.462.0 Safari/534.3": {
-    browser: { id: "chrome", version: "6.0" },
+    browser: { id: "chrome", version: "6.0.462.0" },
     versionIndex: "6",
     features: {
       transforms2d: { level: "full", needPrefix: true, notes: [] },
