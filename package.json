@@ -61,7 +61,7 @@
     "gulp-yaml-validate": "^1.0.2",
     "istanbul": "^1.1.0-alpha.1",
     "merge2": "^1.2.2",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.2",
     "ts-node": "^8.0.3",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2",
