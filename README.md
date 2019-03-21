@@ -10,10 +10,7 @@ Includes browser detection using [bowser](https://github.com/ded/bowser).
 ## Usage
 
 ```javascript
-import { getSupport, detectBrowser, currentBrowser } from "caniuse-support";
-
-// Get feature support of current browser.
-getSupport("transforms2d"); // { level: "none", needPrefix: false, notes: [] }
+import { getSupport, detectBrowser } from "caniuse-support";
 
 // Get feature support of specific browser.
 getSupport("flexbox", { id: "chrome", version: "6.0" }); // { level: "partial", needPrefix: true, notes: [1] }
@@ -24,9 +21,6 @@ getSupport("transforms2d", detectBrowser(userAgent)); // { level: "full", needPr
 
 // Get matching caniuse version index.
 getVersionIndex(detectBrowser(userAgent)); // "26"
-
-// For convenience, get current browser.
-console.log(`${currentBrowser.id} ${currentBrowser.version}`);
 ```
 
 For a list of queryable features see [here](https://github.com/Fyrd/caniuse/tree/master/features-json).
