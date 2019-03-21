@@ -34,10 +34,7 @@ const browserIDMap: { [id: string]: BrowserID } = {
 /**
  * @param {String} ua optional user-agent
  */
-export function detectBrowser(ua?: string): Browser {
-  if (!ua) {
-    return;
-  }
+export function detectBrowser(ua: string): Browser {
   const bowserInst = Bowser.getParser(ua);
   let version = bowserInst.getBrowserVersion().toString();
   let bid: BrowserID = "unknown";
@@ -65,5 +62,3 @@ export function detectBrowser(ua?: string): Browser {
 
   return { id: bid, version };
 }
-
-export const currentBrowser = detectBrowser();
