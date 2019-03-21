@@ -1,3 +1,7 @@
+## 1.0.1 (March 21, 2019)
+
+- Updated README
+
 ## 1.0.0 (March 21, 2019)
 
 - Deprecated `currentBrowser`
