@@ -10,7 +10,7 @@ Includes browser detection using [bowser](https://github.com/ded/bowser).
 ## Usage
 
 ```javascript
-import { getSupport, detectBrowser } from "caniuse-support";
+import { getSupport, detectBrowser, getVersionIndex } from "caniuse-support";
 
 // Get feature support of specific browser.
 getSupport("flexbox", { id: "chrome", version: "6.0" }); // { level: "partial", needPrefix: true, notes: [1] }
