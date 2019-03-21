@@ -8,7 +8,7 @@
 
 /* tslint:disable: no-var-requires */
 
-import { currentBrowser, Browser } from "./browser";
+import { Browser } from "./browser";
 import * as lite from "caniuse-lite";
 
 export interface Support {
@@ -23,7 +23,7 @@ export interface Support {
  * @param {String} feature see full list https://github.com/Fyrd/caniuse/tree/master/features-json.
  * @param {{id: string; version: string}} browser
  */
-export function getSupport(feature: string, browser = currentBrowser): Support {
+export function getSupport(feature: string, browser: Browser): Support {
   const support: Support = { level: "unknown", needPrefix: false, notes: [] };
   const stats = lite.feature(require(`caniuse-lite/data/features/${feature}.js`)).stats[browser.id];
   if (!stats) { return support; }
