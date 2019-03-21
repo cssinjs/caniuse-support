@@ -27,7 +27,8 @@
     "ci:coveralls": "cat coverage/lcov.info | coveralls",
     "test": "cross-env TS_NODE_FILES=true TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}'  mocha --opts mocha.opts",
     "test:coverage": "cross-env TS_NODE_FILES=true TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' istanbul cover node_modules/.bin/_mocha -- --opts mocha.opts",
-    "test:watch": "yarn run test -- --watch"
+    "test:watch": "yarn run test -- --watch",
+    "prepublishOnly": "yarn all"
   },
   "engines": {
     "node": ">=8"
