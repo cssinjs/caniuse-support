@@ -51,7 +51,7 @@ const minified = {
         }),
       ],
     },
-  }
+  },
 };
 
 // @TODO let webpack run configurations in parallel after solving:
