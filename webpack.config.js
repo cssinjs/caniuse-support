@@ -1,5 +1,3 @@
-"use strict";
-
 const fs = require("fs");
 const webpack = require("webpack");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -30,23 +28,31 @@ const config = {
   ],
 };
 
-const minified = Object.assign({}, config, {
-  output: Object.assign({}, config.output, {
-    filename: `dist/${packageName}.min.js`,
-  }),
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {
-            comments: false,
+const minified = {
+  ...{},
+  ...config,
+  ...{
+    output: {
+      ...{},
+      ...config.output,
+      ...{
+        filename: `dist/${packageName}.min.js`,
+      },
+    },
+    optimization: {
+      minimizer: [
+        new UglifyJsPlugin({
+          uglifyOptions: {
+            output: {
+              comments: false,
+            },
+            sourceMap: false,
           },
-          sourceMap: false,
-        },
-      }),
-    ],
-  },
-});
+        }),
+      ],
+    },
+  }
+};
 
 // @TODO let webpack run configurations in parallel after solving:
 // https://github.com/s-panferov/awesome-typescript-loader/issues/323
