@@ -68,7 +68,7 @@
     "typescript": "^2.9.2",
     "uglifyjs-webpack-plugin": "^2.0.0",
     "webpack": "^4.36.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.3.7"
   },
   "dependencies": {
     "bowser": "^2.5.2",
