@@ -1,6 +1,6 @@
 {
   "name": "caniuse-support",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Query the caniuse offline database for feature support.",
   "homepage": "https://github.com/wikiwi/caniuse-support",
   "repository": {
@@ -43,15 +43,15 @@
   "devDependencies": {
     "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.4",
-    "@types/node": "^12.0.0",
+    "@types/node": "^12.7.2",
     "awesome-typescript-loader": "^5.2.0",
     "cash-cat": "^0.2.0",
     "cash-rm": "^0.2.0",
     "chai": "^4.1.2",
     "coveralls": "^3.0.2",
-    "cross-env": "^5.2.0",
+    "cross-env": "^6.0.0",
     "eslint": "^6.0.1",
-    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.13.0",
     "gulp": "^4.0.0",
     "gulp-eslint": "^6.0.0",
@@ -65,13 +65,13 @@
     "mocha": "^6.0.2",
     "ts-node": "^8.3.0",
     "tslint": "^5.10.0",
-    "typescript": "^2.9.2",
+    "typescript": "^3.6.3",
     "uglifyjs-webpack-plugin": "^2.0.0",
     "webpack": "^4.36.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.3.7"
   },
   "dependencies": {
     "bowser": "^2.5.2",
-    "caniuse-lite": "^1.0.30000951"
+    "caniuse-lite": "^1.0.30000989"
   }
 }

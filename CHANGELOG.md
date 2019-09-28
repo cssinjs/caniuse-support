@@ -1,3 +1,7 @@
+## 1.0.2 (August 15, 2019)
+
+- Dependencies update
+
 ## 1.0.1 (March 21, 2019)
 
 - Updated README
