@@ -41,7 +41,7 @@
   "author": "Chi Vinh Le and contributors (https://github.com/wikiwi/caniuse-support/graphs/contributors)",
   "license": "MIT",
   "devDependencies": {
-    "@types/chai": "^4.1.4",
+    "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.4",
     "@types/node": "^12.7.2",
     "awesome-typescript-loader": "^5.2.0",
