@@ -115,10 +115,10 @@ const fixture: any = {
   },
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2": {
     browser: { id: "safari", version: "5.1.7" },
-    versionIndex: "TP",
+    versionIndex: "5.1",
     features: {
-      transforms2d: { level: "full", needPrefix: false, notes: [] },
-      flexbox: { level: "full", needPrefix: false, notes: [] },
+      transforms2d: { level: "full", needPrefix: true, notes: [] },
+      flexbox: { level: "partial", needPrefix: true, notes: [1] },
     },
   },
   "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100": {
