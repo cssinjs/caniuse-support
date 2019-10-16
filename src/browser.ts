@@ -36,8 +36,8 @@ const browserIDMap: { [id: string]: BrowserID } = {
  */
 export function detectBrowser(ua: string): Browser {
   const bowserInst = Bowser.getParser(ua);
-  let version = bowserInst.getBrowserVersion().toString();
   let bid: BrowserID = "unknown";
+  let version = (bowserInst.getBrowserVersion() || '').toString();
   for (const b in browserIDMap) {
     if (bowserInst.getBrowserName().toLowerCase() === b) {
       bid = browserIDMap[b];
