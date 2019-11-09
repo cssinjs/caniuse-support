@@ -115,7 +115,7 @@ const fixture: any = {
   },
   "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148": {
     browser: { id: "ios_saf", version: "12.2" },
-    versionIndex: "12.2-12.3",
+    versionIndex: "12.2-12.4",
     features: {
       transforms2d: { level: "full", needPrefix: false, notes: [] },
       flexbox: { level: "full", needPrefix: false, notes: [] },
