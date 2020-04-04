@@ -71,7 +71,7 @@
     "webpack-cli": "^3.3.7"
   },
   "dependencies": {
-    "bowser": "^2.6.1",
+    "bowser": "^2.9.0",
     "caniuse-lite": "^1.0.30001008"
   }
 }
