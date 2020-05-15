@@ -66,9 +66,9 @@
     "ts-node": "^8.8.1",
     "tslint": "^5.10.0",
     "typescript": "^3.6.3",
-    "uglifyjs-webpack-plugin": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "bowser": "^2.9.0",
