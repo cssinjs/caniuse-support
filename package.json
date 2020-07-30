@@ -71,7 +71,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "bowser": "^2.9.0",
+    "bowser": "^2.10.0",
     "caniuse-lite": "^1.0.30001050",
     "gulp-sourcemap": "^1.0.1"
   }
