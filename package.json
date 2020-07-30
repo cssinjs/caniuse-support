@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "bowser": "^2.9.0",
-    "caniuse-lite": "^1.0.30001050",
+    "caniuse-lite": "^1.0.30001096",
     "gulp-sourcemap": "^1.0.1"
   }
 }
