@@ -2733,10 +2733,10 @@ gulp-jsonlint@^1.3.2:
     plugin-error "1.0.1"
     through2 "^3.0.1"
 
-gulp-sourcemap@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gulp-sourcemap/-/gulp-sourcemap-1.0.1.tgz#9c006002cb831de40eff7b805a147c79ebbba9f8"
-  integrity sha1-nABgAsuDHeQO/3uAWhR8eeu7qfg=
+gulp-sourcemap@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gulp-sourcemap/-/gulp-sourcemap-1.0.2.tgz#b78bfaabaf451203c65c2c0587628996e5aa1823"
+  integrity sha512-Ab4wk/ElaBlMsUgl4aXoklM/K8KFhVmal8kYrACahtuqy2oTLJ3KSCyKmbsqPw8wx7/w014sxPP7ShF0xg/UJA==
 
 gulp-sourcemaps@^2.2.0:
   version "2.6.5"
